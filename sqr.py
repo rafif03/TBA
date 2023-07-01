@@ -25,7 +25,7 @@ def sqr():
         "q2" : [["B11B", "B11B", "SRRS", "q4"], ["111B", "111B", "RSSS", "q3"]],
         "q3" : [["B11B", "B11B", "SRRS", "q3"], ["111B", "111B", "SSSS", "q5"]],
         "q4" : [[]],
-        "q5" : [["111B", "111B", "LLLS", "q5"], ["111B", "111B", "LSSS", "q5"], ["BBBB", "BBBB", "RRRS", "q6"]],
+        "q5" : [["111B", "111B", "LLLS", "q5"], ["1BBB", "1BBB", "LSSS", "q5"], ["BBBB", "BBBB", "RRRS", "q6"]],
         "q6" : [["111B", "111B", "RSRS", "q6"], ["11BB", "11BB", "SRLS", "q7"], ["1BBB", "1BBB", "SSSS", "q8"], ["1B1B", "1B1B", "SSRS", "q8"], ["BBBB", "BBBB", "SSSS", "q9"], ["B11B", "B11B", "SSSS", "q9"], ["B1BB", "B1BB", "SSSS", "q9"], ["BB1B", "BB1B", "SSSS", "q9"]],
         "q7" : [["111B", "111B", "RSLS", "q7"], ["11BB", "11BB", "SRRS", "q6"], ["1BBB", "1BBB", "SSSS", "q8"], ["1B1B", "1B1B", "SSRS", "q8"], ["BBBB", "BBBB", "SSSS", "q10"], ["B11B", "B11B", "SSSS", "q10"], ["B1BB", "B1BB", "SSSS", "q10"], ["BB1B", "BB1B", "SSSS", "q10"]],
         "q8" : [["1B1B", "1B1B", "SSRS", "q8"], ["1BBB", "1111", "SSSR", "q5"]],
@@ -68,10 +68,10 @@ def sqr():
                 print(tape4[index4-30:index4 + 5])
                 print("state : " + state)
                 if state == "q13":
-                    exit("Diterima, hitung jumlah 0 di tape 4")
+                    exit("Diterima, hitung jumlah 1 di tape 4")
                     break
                 elif state == "q4":
-                    exit("Diterima, hitung jumlah 0 di tape 4")
+                    exit("Diterima, hitung jumlah 1 di tape 4")
                 break
             i += 1 
             if i >= len(dict1[state]):
