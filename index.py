@@ -5,6 +5,7 @@ from log2 import *
 from mul import *
 from power import *
 from sub import *
+from sqr import *
 
 print("Pilih Opsi:")
 print("1. Penjumlahan")
@@ -14,6 +15,7 @@ print("4. Logaritma")
 print("5. Perkalian")
 print("6. Pangkat")
 print("7. Pengurangan")
+print("8. Akar Kuadrat")
 while True:
     user_input = int(input("Enter an integer: "))
     if user_input == 1:
@@ -43,5 +45,9 @@ while True:
     elif user_input == 7:
         print("Pengurangan Selected")
         sub()
+        break
+    elif user_input == 8:
+        print("Akar Kuadrat Selected")
+        sqr()
         break
     print("This number is even")
