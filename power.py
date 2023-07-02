@@ -21,7 +21,7 @@ def power():
     print("state : " + state)
     dict1 = {
         "q0" : [["0BBB", "000B", "RRRS", "q0"], ["^BBB", "^BBB", "RLLS", "q1"]],
-        "q1" : [["000B", "X00B", "SSSS", "q2"], ["B00B", "X00B", "SSSS", "q8"], ["BBBB", "BBBB", "SSSS", "q9"], ["0BBB", "0BBB", "SSSS", "q9"], ["100B", "1000", "SSSS", "q9"], ["1BBB", "1BB0", "SSSS", "q9"]],
+        "q1" : [["000B", "X00B", "SSSS", "q2"], ["B00B", "X00B", "SSSS", "q8"], ["BBBB", "BBBB", "SSSS", "q9"], ["0BBB", "0BBB", "SSSS", "q9"], ["^00B", "^000", "SSSS", "q9"], ["^BBB", "^BB0", "SSSS", "q9"]],
         "q2" : [["X00B", "XX0B", "SSSS", "q3"]],
         "q3" : [["XX0B", "XXX0", "SSLR", "q3"], ["XXBB", "XXBB", "SSRS", "q4"]],
         "q4" : [["XXXB", "XX0B", "SSRS", "q4"], ["XXBB", "XXBB", "SLLS", "q5"]],

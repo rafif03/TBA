@@ -42,7 +42,8 @@ while True:
         mul()
     elif user_input == 6:
         print("Pangkat Selected")
-        print("input: 0^0")
+        print("input: 0^(0^n-1)")
+        print("contoh: 2^2 -> 00^0")
         power()
     elif user_input == 7:
         print("Pengurangan Selected")
