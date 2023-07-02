@@ -32,7 +32,7 @@ def power():
         "q9" : [[]]
         }
 
-    while (1):
+    while (state != "q9"):
         i = 0
         while (i < len(dict1[state])):
             #print(i)
@@ -64,8 +64,9 @@ def power():
                 print(tape4[index4-30:index4 + 5])
                 print("state : " + state)
                 if state == "q9":
-                    exit("Diterima, hitung jumlah 0 di tape 4")
+                    print("Diterima, hitung jumlah 0 di tape 4")
                 break  
             i += 1 
             if i >= len(dict1[state]):
-                exit("Tolak")
+                print("Tolak")
+                return

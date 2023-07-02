@@ -55,6 +55,8 @@ def sub():
                 break  
             i += 1
             if state == "q2" and i >= len(dict1[state]):
-                exit("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif)")
+                print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif)")
+                return
             if i >= len(dict1[state]):
-                exit("Tolak")
+                print("Tolak")
+                return

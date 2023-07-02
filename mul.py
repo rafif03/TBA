@@ -27,7 +27,7 @@ def mul():
 
 
 
-    while (1):
+    while (state != "q4"):
         i = 0
         while (i < len(dict1[state])):
             #print(i)
@@ -54,8 +54,9 @@ def mul():
                 print(tape3[index3-30:index3 + 5])
                 print("state : " + state)
                 if state == "q4" and i >= len(dict1[state]):
-                    exit("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
+                    print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
                 break  
             i += 1 
             if i >= len(dict1[state]):
-                exit("Tolak")
+                print("Tolak")
+                return

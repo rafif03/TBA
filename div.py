@@ -26,7 +26,9 @@ def div():
         "q6" : [["00B", "000", "SSS", "q6"], ["11B", "110", "SSS", "q6"], ["01B", "011", "SSS", "q6"], ["10B", "101", "SSS", "q6"]]
         }
 
-    while (1):
+
+    a = 1
+    while (a):
         i = 0
         while (i < len(dict1[state])):
             #print(i)
@@ -55,6 +57,8 @@ def div():
                 break  
             i += 1 
             if state == "q6" and i >= len(dict1[state]):
-                exit("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
-            if i >= len(dict1[state]):
-                exit("Tolak")
+                print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
+                a = 0
+            elif i >= len(dict1[state]):
+                print("Tolak")
+                a = 0

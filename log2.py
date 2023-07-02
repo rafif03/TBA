@@ -56,4 +56,5 @@ def log2():
                 break  
             i += 1
             if i >= len(dict1[state]):
-                sys.exit("Tolak")
+                print("Tolak")
+                return
