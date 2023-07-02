@@ -20,11 +20,11 @@ def div():
         "q0" : [["0BB", "00B", "RRS", "q0"], ["1BB", "11B", "RRS", "q0"], ["/BB", "/BB", "RSS", "q1"]],
         "q1" : [["0BB", "0BB", "SLS", "q2"], ["1BB", "1BB", "SLS", "q2"], ["BBB", "BBU", "SSR", "q6"]],
         "q2" : [["00B", "00B", "RLS", "q2"], ["11B", "11B", "RLS", "q2"], ["01B", "01B", "RLS", "q2"], ["10B", "10B", "RLS", "q2"], ["B0B", "B0B", "LSS", "q3"], ["B1B", "B1B", "LSS", "q3"], ["BBB", "BBB", "LRS", "q6"], ["0BB", "0BB", "SSS", "q6"], ["1BB", "1BB", "SSS", "q6"]],
-        "q3" : [["00B", "001", "SSR", "q4"], ["11B", "111", "SSR", "q4"], ["01B", "010", "SSR", "q4"], ["10B", "100", "SSR", "q4"]],
+        "q3" : [["00B", "001", "SSR", "q4"], ["11B", "110", "SSR", "q4"], ["01B", "011", "SSR", "q4"], ["10B", "101", "SSR", "q4"]],
         "q4" : [["00B", "00B", "LLS", "q4"], ["11B", "11B", "LLS", "q4"], ["01B", "01B", "LLS", "q4"], ["10B", "10B", "LLS", "q4"], ["/1B", "/1B", "RSS", "q5"], ["/0B", "/0B", "RSS", "q5"], ["/BB", "/BB", "LRS", "q6"], ["0BB", "0BB", "SSS", "q6"], ["1BB", "1BB", "SSS", "q6"]],
-        "q5" : [["00B", "001", "SSR", "q2"], ["11B", "111", "SSR", "q2"], ["01B", "010", "SSR", "q2"], ["10B", "100", "SSR", "q2"]],
-        "q6" : [[]],
-        "q7" : [["00B", "001", "SSS", "q7"], ["11B", "111", "SSS", "q7"], ["01B", "010", "SSS", "q7"], ["10B", "100", "SSS", "q7"], ["1BB", "1BB", "SSS", "q7"], ["0BB", "0BB", "SSS", "q7"], ["BBB", "BBB", "SSS", "q7"]]
+        "q5" : [["00B", "001", "SSR", "q2"], ["11B", "110", "SSR", "q2"], ["01B", "011", "SSR", "q2"], ["10B", "101", "SSR", "q2"]],
+        "q7" : [[]],
+        "q6" : [["00B", "000", "SSS", "q7"], ["11B", "110", "SSS", "q7"], ["01B", "011", "SSS", "q7"], ["10B", "101", "SSS", "q7"], ["1BB", "1BB", "SSS", "q7"], ["0BB", "0BB", "SSS", "q7"], ["BBB", "BBB", "SSS", "q7"]]
         }
 
     a = 1
@@ -53,13 +53,13 @@ def div():
                 print(tape1[index1-15:index1 + 10])
                 print(tape2[index2-15:index2 + 10]) 
                 print(tape3[index3-15:index3 + 10])
-                print("state : " + state)         
+                print("state : " + state)  
+                if state == "q7":
+                    print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
+                    a = 0
                 break  
             i += 1 
-            if state == "q7" and i >= len(dict1[state]):
-                print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
-                a = 0
+            
             if i >= len(dict1[state]):
                 print("Tolak")
                 a = 0
-        
