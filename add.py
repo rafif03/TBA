@@ -56,7 +56,7 @@ def add():
             i += 1
             if state == "q2" and i >= len(dict1[state]):
                 print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif)")
-                a = 0
+                return
             elif i >= len(dict1[state]):
                 print("Tolak")
-                a = 0
+                return

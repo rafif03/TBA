@@ -65,6 +65,7 @@ def power():
                 print("state : " + state)
                 if state == "q9":
                     print("Diterima, hitung jumlah 0 di tape 4")
+                    return
                 break  
             i += 1 
             if i >= len(dict1[state]):

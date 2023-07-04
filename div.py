@@ -56,10 +56,10 @@ def div():
                 print("state : " + state)  
                 if state == "q7":
                     print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
-                    a = 0
+                    return
                 break  
             i += 1 
             
             if i >= len(dict1[state]):
                 print("Tolak")
-                a = 0
+                return

@@ -14,16 +14,16 @@ def sqr():
     tape3 = list(masuk3)
     tape4 = list(masuk4)
     state = "q0"
-    print(tape1[index1-30:index1 + 5])
-    print(tape2[index2-30:index2 + 5])
-    print(tape3[index3-30:index3 + 5])
-    print(tape4[index4-30:index4 + 5])
+    print(tape1[index1-10:index1 +15])
+    print(tape2[index2-10:index2 +15])
+    print(tape3[index3-10:index3 +15])
+    print(tape4[index4-10:index4 +15])
     print("state : " + state)
     dict1 = {
         "q0" : [["1BBB", "1111", "RSSR", "q1"]],
         "q1" : [["111B", "111B", "RSSS", "q2"], ["B11B", "B11B", "SRRS", "q4"]],
         "q2" : [["B11B", "B11B", "SRRS", "q4"], ["111B", "111B", "RSSS", "q3"]],
-        "q3" : [["B11B", "B11B", "SRRS", "q3"], ["111B", "111B", "SSSS", "q5"]],
+        "q3" : [["B11B", "B11B", "SRRS", "q3"], ["111B", "111B", "SSSS", "q5"], ["BBBB", "BBBB", "LLLS", "q3"]],
         "q4" : [[]],
         "q5" : [["111B", "111B", "LLLS", "q5"], ["1BBB", "1BBB", "LSSS", "q5"], ["BBBB", "BBBB", "RRRS", "q6"]],
         "q6" : [["111B", "111B", "RSRS", "q6"], ["11BB", "11BB", "SRLS", "q7"], ["1BBB", "1BBB", "SSSS", "q8"], ["1B1B", "1B1B", "SSRS", "q8"], ["BBBB", "BBBB", "SSSS", "q9"], ["B11B", "B11B", "SSSS", "q9"], ["B1BB", "B1BB", "SSSS", "q9"], ["BB1B", "BB1B", "SSSS", "q9"]],
@@ -62,17 +62,19 @@ def sqr():
                 elif(dict1[state][i][2][3] == "L"):
                     index4 -= 1
                 state = dict1[state][i][3]
-                print(tape1[index1-30:index1 + 5])
-                print(tape2[index2-30:index2 + 5]) 
-                print(tape3[index3-30:index3 + 5])
-                print(tape4[index4-30:index4 + 5])
+                print(tape1[index1-10:index1 +15])
+                print(tape2[index2-10:index2 +15]) 
+                print(tape3[index3-10:index3 +15])
+                print(tape4[index4-10:index4 +15])
                 print("state : " + state)
                 if state == "q13":
-                    exit("Diterima, hitung jumlah 1 di tape 4")
-                    break
+                    print("Diterima, hitung jumlah 1 di tape 4")
+                    return
                 elif state == "q4":
-                    exit("Diterima, hitung jumlah 1 di tape 4")
+                    print("Diterima, hitung jumlah 1 di tape 4")
+                    return
                 break
             i += 1 
             if i >= len(dict1[state]):
-                exit("Tolak")
+                print("Tolak")
+                return

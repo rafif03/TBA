@@ -53,6 +53,7 @@ def log2():
                 print("state : " + state)
                 if state == "q10":
                     print("Diterima, hitung jumlah X pada tape ke 2")
+                    return
                 break  
             i += 1
             if i >= len(dict1[state]):

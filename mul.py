@@ -55,6 +55,7 @@ def mul():
                 print("state : " + state)
                 if state == "q4" and i >= len(dict1[state]):
                     print("Diterima, hitung jumlah 0/1 (0 positif, 1 negatif) di tape 3")
+                    return
                 break  
             i += 1 
             if i >= len(dict1[state]):
