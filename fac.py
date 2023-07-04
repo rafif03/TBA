@@ -65,8 +65,9 @@ def fac():
                 print(tape3[index3-30:index3 + 5])
                 print(tape4[index4-30:index4 + 5])
                 print("state : " + state)
-                if state != "q0":
+                if state == "q11":
                     print("Diterima, hitung jumlah 0 di tape 4")
+                    return
                 break  
             i += 1 
             if i >= len(dict1[state]):
